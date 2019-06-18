@@ -2,9 +2,9 @@
     <head>
         <title>@yield('title')</title>
     </head>
-    <body dir="rtl">
+    <body>
         @section('sidebar')
-            هنا يوجد محتوى المقطع sidebar في المخطط الرئيس.
+            This is the master sidebar.
         @show
 
         <div class="container">
@@ -12,3 +12,4 @@
         </div>
     </body>
 </html>
+

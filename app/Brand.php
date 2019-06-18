@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Brand extends Model
 {
     protected $fillable = array('name', 'created_at_ip', 'updated_at_ip');
 }

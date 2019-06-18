@@ -33,8 +33,34 @@ Route::get('/read', function() {
   $data = $category->all(array('id','name'));
 
   foreach ($data as $list) {
-   echo $list->name . ' ' . $list->id . '</br>';
+   echo $list->id . ' ' . $list->name . '</br>';
   }
+});
+Route::get('/update', function() {
+  $category = App\Category::find(4);
+  $category->name = 'KIDS 2';
+  $category->save();
+
+  $data = $category->all(array('name','id'));
+
+  foreach ($data as $list) {
+    echo $list->id . ' ' . $list->name . '</br>';
+  }
+});
+Route::get('/delete', function() {
+  $category = App\Category::find(4);
+  $category->delete();
+
+  $data = $category->all(array('name','id'));
+
+  foreach ($data as $list) {
+    echo $list->id . ' ' . $list->name . '</br>';
+  }
+});
+
+route::get('/insert',function(){
+	App\Category::create(array('name' => 'New Music2'));
+	return 'category added';
 });
 
 
